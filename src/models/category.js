@@ -10,10 +10,13 @@ const categorySchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    description: {
+        type: String
+    },
     type: {
         type: String,
         enum: ['income', 'expense'],
-        required: true
+        default: "income"
     },
     isDefault: {
         type: Boolean,
